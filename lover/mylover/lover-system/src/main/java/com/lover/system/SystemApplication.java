@@ -1,7 +1,6 @@
 package com.lover.system;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -17,7 +16,7 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @EnableEurekaClient
 public class SystemApplication {
-    public static void main(MysqlxDatatypes.Scalar.String[] args) {
+    public static void main(String[] args) {
         SpringApplication.run(SystemApplication.class);
     }
     @Primary
@@ -25,5 +24,4 @@ public class SystemApplication {
     public DataSource druidDataSource() {
         return DruidDataSourceBuilder.create().build();
     }
-    //
 }

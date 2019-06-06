@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+#          开发
+          search-locations: classpath:/dev
+#          测试
+#          search-locations: classpath:/test
+#           生产
+#          search-locations: classpath:/prod
+  profiles:
+    active: native
+  application:
+    name: config
+server:
+  port: 7777

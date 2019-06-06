@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://lover:lover@localhost:6666/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+lover:
+  service:
+    eureka:
+      name: eureka
+      port: 6666
+    system:
+      name: system
+      port: 1001

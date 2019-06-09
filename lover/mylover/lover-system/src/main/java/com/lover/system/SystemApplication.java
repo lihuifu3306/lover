@@ -1,8 +1,13 @@
 package com.lover.system;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+
+import javax.sql.DataSource;
 
 /**
  * @Author: 李惠福
@@ -13,5 +18,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class SystemApplication {
     public static void main(String[] args) {
         SpringApplication.run(SystemApplication.class);
+    }
+
+    @Primary
+    @Bean
+    public DataSource druidDataSource() {
+        return DruidDataSourceBuilder.create().build();
     }
 }

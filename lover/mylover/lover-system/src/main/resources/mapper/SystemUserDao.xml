@@ -27,9 +27,8 @@
     <!--新增用户-->
     <insert id="insertUserInfo">
         insert into system_user
-        (`user_code`,`user_name`,`create_time`,`user_uuid`,`id_card`,
-        `tele_no`,`birthday`)
-        values (#{userCode}, #{userName, #{createTime}, #{userUuid}, #{idCard}, #{teleNo});
+        (`user_code`,`user_name`,`create_time`,`user_uuid`,`id_card`,`tele_no`,`birthday`)
+        values (#{userCode}, #{userName}, #{createTime}, #{userUuid}, #{idCard}, #{teleNo}, #{birthday});
     </insert>
 
 </mapper>

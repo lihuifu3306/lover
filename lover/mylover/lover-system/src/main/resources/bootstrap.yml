@@ -6,6 +6,6 @@ spring:
       #     dev 开发
       uri: http://localhost:7777
 #     test 测试
-#      uri: http://180.76.234.60:8888
+#      uri: http://180.76.234.60:7777
 #     prod 生产
 #      uri:

@@ -13,4 +13,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface SystemUserDao extends BaseMapper<SystemUserEntity> {
 
+    /**
+     * 新增用户
+     * @param userEntity
+     * @return int
+     */
+    int insertUserInfo(SystemUserEntity userEntity);
 }

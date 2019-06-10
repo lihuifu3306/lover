@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /**
@@ -29,12 +33,17 @@ public class SystemUserEntity implements Serializable {
     /**
      * 用户编码
      */
+    @NotBlank(message = "用户编码不能为空")
+    @Length(min = 0, max = 10, message = "用户编码长度不正确")
+    @Pattern(regexp = "^[0-9a-zA-Z_]+$", message = "用户编码只能由数字、字母、下划线组成")
     @TableField("user_code")
     private String userCode;
 
     /**
      * 用户姓名
      */
+    @NotBlank(message = "用户姓名不能为空")
+    @Length(min = 0, max = 10, message = "用户姓名长度不正确")
     @TableField("user_name")
     private String userName;
 

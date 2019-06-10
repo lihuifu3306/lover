@@ -9,16 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lover-core</artifactId>
-    <name>core</name>
-    <description>core</description>
+    <artifactId>lover-util</artifactId>
+    <name>util</name>
+    <description>util</description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.crazy.love</groupId>
-            <artifactId>lover-util</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -29,6 +24,8 @@
             <version>4.3.13.RELEASE</version>
         </dependency>
     </dependencies>
+
+
 
 
 </project>

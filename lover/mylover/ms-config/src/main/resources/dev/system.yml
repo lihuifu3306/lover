@@ -27,3 +27,14 @@ spring:
       # 打开PSCache，并且指定每个连接上PSCache的大小
       poolPreparedStatements: true
       maxPoolPreparedStatementPerConnectionSize: 20
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    config-location: classpath:/mybatis-config.xml
+  configuration:
+    map-underscore-to-camel-case: true
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.lover.system.entity.mybatis
+  mapper-locations: classpath:/mapper/*.xml

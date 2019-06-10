@@ -13,4 +13,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface MPSystemUserService extends IService<SystemUserEntity> {
 
+    /**
+     * 新增用户
+     * @param userEntity
+     * @return
+     */
+    int insertUserInfo(SystemUserEntity userEntity);
+
 }

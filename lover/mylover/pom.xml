@@ -15,6 +15,7 @@
         <module>ms-eureka</module>
         <module>lover-system</module>
         <module>lover-core</module>
+        <module>lover-util</module>
     </modules>
 
     <parent>

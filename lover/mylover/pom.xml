@@ -14,6 +14,7 @@
         <module>ms-config</module>
         <module>ms-eureka</module>
         <module>lover-system</module>
+        <module>lover-core</module>
     </modules>
 
     <parent>

@@ -58,4 +58,11 @@ public class SystemUserServiceDiy extends ServiceImpl<SystemUserDao, SystemUserE
         userEntity.setDeleteTime(LocalDateTime.now());
         return this.updateById(userEntity);
     }
+
+    @Override
+    public boolean disableUserInfo(SystemUserEntity userEntity) {
+        userEntity.setIsDisable(1);
+        userEntity.setDisableTime(LocalDateTime.now());
+        return this.updateById(userEntity);
+    }
 }

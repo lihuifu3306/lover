@@ -49,4 +49,11 @@ public interface MPSystemUserService extends IService<SystemUserEntity> {
      */
     boolean deleteUserInfo(SystemUserEntity userEntity);
 
+    /**
+     *禁用用户
+     * @param userEntity
+     * @return boolean
+     */
+    boolean disableUserInfo(SystemUserEntity userEntity);
+
 }

@@ -50,7 +50,7 @@ public class SystemUserAction {
      * @param result
      * @return JsonResult
      */
-    @PutMapping(value = "/update")
+    @PostMapping(value = "/update")
     public JsonResult update(@Valid SystemUserEntity userEntity, BindingResult result) {
         if (result.hasErrors()) {
             return JsonResult.BindingError(result);
@@ -69,9 +69,23 @@ public class SystemUserAction {
      * @param userEntity
      * @return JsonResult
      */
-    @DeleteMapping(value = "/delete")
+    @PostMapping(value = "/delete")
     public JsonResult remove(SystemUserEntity userEntity) {
         if (userService.deleteUserInfo(userEntity)) {
+            return JsonResult.SUCCESS;
+        } else {
+            return JsonResult.FAILURE;
+        }
+    }
+
+    /**
+     * 禁用用户
+     * @param userEntity
+     * @return JsonResult
+     */
+    @PostMapping(value = "/disable")
+    public JsonResult disableUser(SystemUserEntity userEntity) {
+        if (userService.disableUserInfo(userEntity)) {
             return JsonResult.SUCCESS;
         } else {
             return JsonResult.FAILURE;
